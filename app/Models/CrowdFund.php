@@ -36,16 +36,18 @@ class CrowdFund extends Model
     // Accessor to get formatted duration
     public function getFormattedDurationAttribute()
     {
-        $durationInDays = (int) $this->duration;
+        $endDate = Carbon::createFromTimestamp($this->duration);
+        $now = Carbon::now();
 
-        $years = intdiv($durationInDays, 365);
-        $months = intdiv($durationInDays % 365, 30);
-        // $days = $durationInDays % 30;
+        if ($now->greaterThan($endDate)) {
+            return 'Time exceeded';
+        }
+
+        $diff = $endDate->diff($now);
 
         $formatted = [];
-        if ($years) $formatted[] = $years . ' years';
-        if ($months) $formatted[] = $months . ' months';
-        // if ($days) $formatted[] = $days . ' days';
+        if ($diff->y) $formatted[] = $diff->y . ' years';
+        if ($diff->m) $formatted[] = $diff->m . ' months';
 
         return implode(', ', $formatted);
     }
