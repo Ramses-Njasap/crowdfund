@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS CDN -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link href="{{ asset('fontawesome-free-6.6.0-web/css/all.min.css') }}" rel='stylesheet'>
+    <link href="{{ secure_asset('fontawesome-free-6.6.0-web/css/all.min.css') }}" rel='stylesheet'>
     <!-- Custom CSS -->
      <!-- TinyMCE -->
     <script src="https://cdn.tiny.cloud/1/z0tjfyc19bx62zx1blg9yjkkrg6p35w0cwf30qgxhrv4tf8e/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
