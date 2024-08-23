@@ -10,7 +10,7 @@
                     <h4 class="mb-0">Login</h4>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ url('login') }}">
+                    <form method="POST" action="{{ secure_url('login') }}">
                         @csrf
 
                         <!-- Email Input -->
