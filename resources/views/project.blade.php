@@ -79,7 +79,7 @@
                 <!-- All authenticated users can raise funds -->
                 <div class='d-flex flex-row flex-wrap align-items-center mt-4'>
                     <form action="{{ route('crowdfund.raiseFund', $crowdfund->id) }}" method="POST" style="display: inline;">
-                        @csrf
+                        {!! csrf_field() !!}
                         @method('PATCH')
                         <div class='d-flex flex-row flex-wrap align-items-center'>
                             <div>
