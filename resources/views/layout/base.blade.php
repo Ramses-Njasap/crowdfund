@@ -138,7 +138,7 @@
                                 <img src="https://via.placeholder.com/30" alt="User"> {{ Auth::user()->name }}
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                                <form action="{{ secure_route('logout') }}" method="POST" style="display: inline;">
                                     @csrf
                                     <button type="submit" class="dropdown-item">Logout</button>
                                 </form>
@@ -150,7 +150,10 @@
                 @guest
                     <ul class="navbar-nav ml-lg-4 user-profile">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Login</a>
+                            <a class="nav-link" href="{{ secure_route('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ secure_route('register') }}">Login</a>
                         </li>
                     </ul>
                 @endguest
