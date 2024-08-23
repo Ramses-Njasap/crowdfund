@@ -138,7 +138,7 @@
                                 <img src="https://via.placeholder.com/30" alt="User"> {{ Auth::user()->name }}
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                                <form action="{{ secure_url(route('logout')) }}" method="POST" style="display: inline;">
                                     @csrf
                                     <button type="submit" class="dropdown-item">Logout</button>
                                 </form>
@@ -217,7 +217,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ route('crowdfund.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ secure_url(route('crowdfund.store')) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
