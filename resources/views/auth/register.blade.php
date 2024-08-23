@@ -6,7 +6,7 @@
     <div class="row w-100">
         <div class="col-md-8 col-lg-6">
             <div class="card">
-                <div class="card-header bg-success text-white">
+                <div class="card-header bg-primary text-white">
                     <h4 class="mb-0">Register</h4>
                 </div>
                 <div class="card-body">
@@ -38,7 +38,7 @@
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="submit" class="btn btn-success btn-block">Register</button>
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
 
                         <!-- Display Validation Errors -->
                         @if ($errors->any())
