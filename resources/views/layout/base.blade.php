@@ -153,7 +153,7 @@
                             <a class="nav-link" href="{{ route('login') }}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">Login</a>
+                            <a class="nav-link" href="{{ route('register') }}">Register</a>
                         </li>
                     </ul>
                 @endguest
@@ -171,7 +171,7 @@
             <div class="row">
                 <!-- Company Info -->
                 <div class="col-md-4">
-                    <div class="footer-brand">MyBrand</div>
+                    <div class="footer-brand">CrowdFund</div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat nisl nec dolor suscipit, in laoreet felis pharetra.</p>
                 </div>
                 <!-- Quick Links -->
